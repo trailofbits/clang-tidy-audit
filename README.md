@@ -22,11 +22,15 @@ sudo apt-get build-dep clang-3.7
 
 ## Build
 
+```
    ./build.sh
+```
 
 ## Test
 
+```
   ./test.sh
+```
 
 ## Usage
 
@@ -38,5 +42,5 @@ cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON path_to_cmakelists
 This creates a compile\_commands.json, which tells clang-tidy the specific compile commands used so it can properly parse the source file into an AST.
 
 ```
-./debug/bin/clang-tidy -checks=readability-AuditAnnotate file_to_check.cpp
+./build/bin/clang-tidy -checks=readability-AuditAnnotate file_to_check.cpp
 ```
