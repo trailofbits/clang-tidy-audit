@@ -12,35 +12,35 @@ This project builds clang and llvm and has the same prerequisites:
 
 ### Mac OS X
 ```
-brew install cmake
+$ brew install cmake
 ```
 
 ### Ubuntu / Debian Linux
 ```
-sudo apt-get build-dep clang-3.7
+$ sudo apt-get build-dep clang-3.7
 ```
 
 ## Build
 
 ```
-   ./build.sh
+$ ./build.sh
 ```
 
 ## Test
 
 ```
-  ./test.sh
+$ ./test.sh
 ```
 
 ## Usage
 
 clang-tidy is built on top of clang's libtooling interface and requires your project to have a compilation database. The easiest way to get a compliation database is to let cmake generate one for you with:
 ```
-cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON path_to_cmakelists
+$ cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON path_to_cmakelists
 ```
 
 This creates a compile\_commands.json, which tells clang-tidy the specific compile commands used so it can properly parse the source file into an AST.
 
 ```
-./build/bin/clang-tidy -checks=readability-AuditAnnotate file_to_check.cpp
+$ ./build/bin/clang-tidy -checks=readability-AuditAnnotate file_to_check.cpp
 ```
