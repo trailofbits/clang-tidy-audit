@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/Users/ryan/svn/llvm/test/build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++     --std=c++11   -o CMakeFiles/cpptest.dir/test.cpp.o -c /Users/ryan/svn/llvm/test/test.cpp",
+  "file": "/Users/ryan/svn/llvm/test/test.cpp"
+},
+{
+  "directory": "/Users/ryan/svn/llvm/test/build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++     --std=c++11   -std=gnu++11 -o CMakeFiles/cpptest2.dir/test2.cpp.o -c /Users/ryan/svn/llvm/test/test2.cpp",
+  "file": "/Users/ryan/svn/llvm/test/test2.cpp"
+}
+]
