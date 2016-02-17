@@ -135,11 +135,8 @@ namespace clang {
 
 			void AuditannotateCheck::registerMatchers(ast_matchers::MatchFinder *Finder)
 			{
-				if (getLangOpts().CPlusPlus) {
-					Finder->addMatcher(makeAutoDeclMatcher(), this);
-					Finder->addMatcher(lambdaExpr().bind(LambdaExprCapturesId), this);
-				}
-
+				Finder->addMatcher(makeAutoDeclMatcher(), this);
+				Finder->addMatcher(lambdaExpr().bind(LambdaExprCapturesId), this);
 				Finder->addMatcher(implicitCastExpr().bind(AllImplicitCastExprsId), this);
 			}
 
